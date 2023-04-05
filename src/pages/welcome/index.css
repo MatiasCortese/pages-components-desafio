@@ -1,0 +1,10 @@
+.welcome-container {
+    padding: 41px 30px 113px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.comenzar {
+    padding-top: 16px;
+}

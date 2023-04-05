@@ -1,0 +1,9 @@
+.step-one-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 41px 36px 113px 30px;
+    align-items: center;
+    width: 100%;
+}
+/*# sourceMappingURL=index.3830c9ed.css.map */
