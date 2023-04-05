@@ -2,6 +2,12 @@ import { initStepOne } from "./pages/step-one";
 import { initThankYou } from "./pages/thank-you";
 import { initWelcome } from "./pages/welcome";
 
+const BASE_PATH = "/pages-components-desafio";
+
+function isGitHubPages(){
+    return location.host.includes("github.io");
+}
+
 const routes = [
     {
         path: /\/welcome/,
@@ -20,13 +26,17 @@ const routes = [
 export function initRouter(container: Element) {
     // En este ejemplo declaramos las funciones dentro del router ya que necesitamos acceso al containeer que llega como parámetro
     function goTo(path){
-        history.pushState({}, "", path);
-        handleRoute(path);
+        // Comprueba si esta siendo usado desde github o local y lo guarda
+        const completePath = isGitHubPages() ? BASE_PATH + path : path;
+        history.pushState({}, "", completePath);
+        handleRoute(completePath);
     }
     function handleRoute(route){
         console.log(`handleRoute recibió una ruta y es ${route}`);
+        // Convierte el path para que se ejecute con el REGEX (según sea, github o local)
+        const newRoute = isGitHubPages() ? route.replace(BASE_PATH, "") : route;
         for (const r of routes){
-            if  (r.path.test(route)){
+            if  (r.path.test(newRoute)){
                 // Pasamos la función como parámetro. Esto es muy común en algunos frameworks
                 const el = r.component({ goTo: goTo});
                 if (container.firstChild){
@@ -36,7 +46,7 @@ export function initRouter(container: Element) {
             }
         }
     }
-    if (location.pathname == "/") {
+    if (location.pathname == "/" || location.host.includes("github.io")) {
         goTo("/welcome");
     } else {
         handleRoute(location.pathname);
