@@ -1,12 +1,12 @@
 {
   "name": "index",
   "version": "1.0.0",
-  "source": "src/index.html",
+  "source": "./src/index.html",
   "license": "MIT",
   "devDependencies": {
-    "parcel": "^2.0.0-rc.0",
     "gh-pages": "^5.0.0",
-      "shx": "^0.3.2"
+    "parcel": "^2.0.0-rc.0",
+    "shx": "^0.3.2"
   },
   "scripts": {
     "start": "parcel ./src/index.html",
@@ -15,5 +15,7 @@
     "prebuild": "shx rm -rf dist/*",
     "build": "parcel build ./src/index.html --public-url ./",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
-  }
+  },
+  "repository": "https://github.com/MatiasCortese/pages-components-desafio.git",
+  "author": "Matias Cortese <matiasemanuelcortese@gmail.com>"
 }
