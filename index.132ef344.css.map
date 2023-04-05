@@ -1,0 +1,1 @@
+{"mappings":"AAAA,mBAEA,YAAA,CACA,qBAAA,CACA,QAAA,CAHA,uBAIA,CAEA,UACA,gBACA","sources":["src/pages/welcome/index.css"],"sourcesContent":[".welcome-container {\r\n    padding: 41px 30px 113px 30px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 15px;\r\n}\r\n\r\n.comenzar {\r\n    padding-top: 16px;\r\n}"],"names":[],"version":3,"file":"index.132ef344.css.map"}

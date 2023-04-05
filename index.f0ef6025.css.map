@@ -1,0 +1,1 @@
+{"mappings":"AAAA,6FAA6F,CAE7F,EACI,qBAAsB,CACtB,cACJ,CAEA,KACI,QACJ","sources":["src/style.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');\r\n\r\n* {\r\n    box-sizing: border-box;\r\n    font-size: 18px;\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n}\r\n"],"names":[],"version":3,"file":"index.f0ef6025.css.map"}
